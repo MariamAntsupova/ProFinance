@@ -1,0 +1,14 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+  <div class="logo"><a href="#home">Pro Finan<span>ce</span></a></div>
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  <nav class="nav-links" [class.show]="menuOpen">
+    <a href="#">About Us</a>
+    <a href="#">Catalog</a>
+    <a href="#">Price</a>
+    <a href="#">Help</a>
+  </nav>
+  <div class="actions">
+    <button class="login"  type="button" [routerLink]="'/login'">Log In</button>
+    <button class="download"><i class="fab fa-apple"></i> Download App</button>
+  </div>
+</header>

@@ -1,0 +1,103 @@
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4ff00;
+  padding: 4rem 3rem;
+  height: 60vh;
+  border-radius: 1.5rem;
+  width: 80%;
+  margin: auto;
+
+}
+
+.left {
+  width: 50%;
+}
+
+.left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+    line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.download {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.download i {
+  font-size: 1.2rem;
+}
+
+.find-more {
+  display: block;
+  margin-top: 2rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+}
+
+.phone {
+  position: absolute;
+  height: 800px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.phone1 {
+  top: 60px;
+  right: 9%;
+  transform: rotate(-10deg);
+  z-index: 4;
+}
+
+.phone2 {
+  top: 90px;
+  right: 1%;
+  transform: rotate(10deg);
+  z-index: 3;
+}
+
+@media (max-width:1000px){
+    .phone {
+        opacity: 20% ;
+        height: 500px;
+    }
+}
+
+@media (max-width:800px){
+    .phone {
+        display: none ;
+    }
+    .left{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}

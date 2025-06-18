@@ -1,0 +1,46 @@
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="login-form-mat" novalidate>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" required autocomplete="username" />
+    <mat-error *ngIf="signinForm.get('username')?.hasError('required')">
+      Username is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width password-field">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      [type]="hidePassword ? 'password' : 'text'"
+      formControlName="password"
+      required
+      autocomplete="current-password"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      type="button"
+      (click)="togglePassword()"
+      [attr.aria-label]="hidePassword ? 'Show password' : 'Hide password'"
+      [attr.aria-pressed]="!hidePassword"
+    >
+      <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+    <mat-error *ngIf="signinForm.get('password')?.hasError('required')">
+      Password is required
+    </mat-error>
+    <mat-error *ngIf="signinForm.get('password')?.hasError('minlength')">
+      Minimum {{ signinForm.get('password')?.getError('minlength')?.requiredLength }} characters
+    </mat-error>
+  </mat-form-field>
+  <button class="sign-buttons" type="submit"  [disabled]="signinForm.invalid">
+    Sign In
+  </button>
+    <div class="signup-section">
+        <p>Not registered yet? </p>
+        <button class="sign-buttons" type="button" routerLink="/signup"  >
+            Sign Up
+        </button>
+    </div>
+
+</form>

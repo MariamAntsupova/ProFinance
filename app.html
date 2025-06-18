@@ -1,0 +1,7 @@
+<app-nav-bar></app-nav-bar>
+
+<ng-container *ngIf="isHomePage">
+    <app-home></app-home>
+</ng-container>
+
+  <router-outlet *ngIf="!isHomePage"></router-outlet>
