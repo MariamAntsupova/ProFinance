@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+      font-family: 'Segoe UI', sans-serif;
+      
+}
+:root {
+  --font-heading-size: 46px;
+  --font-heading-line: 120%;
+  --font-title-size: 18px;
+  --font-title-line: 130%;
+  --font-body-size: 20px;
+  --font-body-line: 150%;
+  --font-family-main: "Montserrat", sans-serif;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-family-main);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line);
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
